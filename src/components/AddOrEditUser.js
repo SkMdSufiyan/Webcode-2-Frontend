@@ -330,7 +330,7 @@ const AddOrEditUser = () => {
                   // If the form is submitted and the user is added or updated successfully
                   <Card style={{width: '18rem'}}>
                       <CardBody>
-                          <h6 className='apiCallSuccess-h6-class'>{userID ? "User is updated successfully" : "User is added successfully"}</h6>
+                          <h6 className='apiCallSuccess-h6-class'>{userID ? "User is updated successfully" : "User is added and activated successfully"}</h6>
                           <br />
                           <br />
                           {userID ? 
