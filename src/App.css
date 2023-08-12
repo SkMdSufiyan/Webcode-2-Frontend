@@ -1,0 +1,139 @@
+.App {
+  text-align: center;
+  justify-content: center;
+  margin: 5px 15px;
+  padding: 5px 10px;
+}
+
+
+.blue-color-p-class{
+  background-color: blue;
+  color: white;
+  font: bold;
+}
+
+.suggestion-p-class{
+  color: blue;
+  font-size: small;
+}
+
+.Button-class{
+  margin: 5px 10px;
+}
+
+
+.component-main-div{
+  display: inline-block;
+  text-align: center;
+}
+
+span{
+  color: red;
+  font-size: smaller;
+}
+
+
+.home-page-Button-class{
+  margin: 5px 15px;
+}
+
+.signup-login-link-but-div{
+  text-align: right;
+}
+
+.signup-link-but, .login-link-but{
+  border: none;
+  background-color: white;
+  color: blue;
+  margin: 5px 10px;
+  text-decoration: underline;
+}
+
+.forgot-pw-link-but{
+  border: none;
+  background-color: white;
+  color: blue;
+  font-size: small;
+  margin: 5px 10px;
+  text-decoration: underline;
+}
+
+.apiCallError-h6-class{
+  color: red;
+}
+
+.apiCallSuccess-h6-class{
+  color: blue;
+}
+
+
+.profile-div{
+  margin: 10px;
+  padding: 10px;
+}
+
+
+.Navbar-class{
+  margin-bottom: 20px;
+  background-color: rgb(19, 68, 44);
+}
+
+.dashboard-button-div{
+  display: inline-block;
+  padding: 15px;
+  border: 1px solid green;
+}
+
+.dashboard-Button-class{
+  margin: 5px 10px;
+
+}
+
+.action-buttons{
+  margin : 0px 5px;
+}
+
+td{
+  text-align: center;
+  justify-content: center;
+}
+
+.home-page-suggestion-flex{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.home-page-suggestion-divs{
+  display: inline-block;
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid black;
+}
+
+.home-page-suggestion-p-red{
+  font-size: small;
+  color: red;
+  padding: 0px;
+  margin: 0px;
+  text-align: left;
+}
+
+.home-page-suggestion-p-green{
+  font-size: small;
+  color: green;
+  padding: 0px;
+  margin: 0px;
+  text-align: left;
+
+}
+
+
+
+
+@media(max-width : 600px){
+  .home-page-suggestion-flex{
+    flex-direction: column;
+  }
+
+}
