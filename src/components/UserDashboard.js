@@ -10,7 +10,7 @@ const UserDashboard = () => {
     const navigate = useNavigate();
 
 
-    const {accessToken, userProfile, apiCallError, setApiCallError, logoutUserFun, config} = useContext(CrmContext);
+    const {accessToken, userProfile, apiCallError, setApiCallError, logoutUserFun, config, setUserProfile} = useContext(CrmContext);
 
     const typeOfUser = userProfile.typeOfUser;
 
@@ -51,17 +51,18 @@ const UserDashboard = () => {
     const [isAllValidData, setIsAllValidData] = useState(true);
 
 
-    // "getUserByID" function to get and store the updated userProfile, when it is updated
-    // This function will be called inside 
-    const getUserByID = async (id) => {
+    // "getSelfProfile" function to get and store the updated userProfile, when it is updated
+    // This function will be called inside "updateUserProfileFun"
+    const getSelfProfile = async (id) => {
         try{
-            await axios.get(`${serverUrl}/api/${id}/users/${id}`, config)
+            await axios.get(`${serverUrl}/api/${id}/users/getSelfProfile/${id}`, config)
             .then(res => {
               const userDat = {...res.data.data};
             //   Deleting the "hashedPassword" from the user data
               delete userDat.hashedPassword;
             //   Storing the "userDat" in the localStorage as new "userProfile"
               localStorage.setItem('userProfile', JSON.stringify(userDat));
+              setUserProfile(userDat);
 
               setApiCallError("");
             })
@@ -73,16 +74,19 @@ const UserDashboard = () => {
         }
       } 
 
+
+
     const updateUserProfileFun = async (profileFormData) => {
-        try{          
+        try{       
             const id = profileFormData._id;
             // For removing the _id from the "profileFormData", taking a copy of that and deleting the _id
             const newProfile = {...profileFormData};
             delete newProfile._id;
 
-            await axios.put(`${serverUrl}/api/${id}/users/${id}`, newProfile, config)
-                .then(res => {
-                    getUserByID(id);
+            await axios.put(`${serverUrl}/api/${id}/users/updateProfile/${id}`, newProfile, config)
+                .then(res => { 
+                    getSelfProfile(id);
+                    
                     setIsEditProfile(false);
                     setApiCallError("");
                 })
