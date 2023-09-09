@@ -25,7 +25,11 @@ const Home = () => {
             </NavItem>
           </Nav>
     </Navbar>
+    
+      <p className='app-suggestion-p'>When you have opened this application's link for the <b style={{color : "blue"}}>first time</b>, please wait for 20-30 seconds <b style={{color : "blue"}}>after submitting the requests for login, signup, or forgot password</b>.</p>
+      <p className='app-suggestion-p'>Due to Render's <b style={{color : "blue"}}>"spinning down on idle"</b> issue, the server may take a little longer time to start (when it is opened after a long time). </p>
       
+    <br />
       
 
         <h5 style={{color: "blue"}}>Welcome to CRM application </h5>
