@@ -128,6 +128,8 @@ useEffect(() => {
       
       
             <Card style={{width: '18rem'}}>
+                <br />
+                    <span>After submitting the login form, kindly wait for some time, it may take some time to process.</span>
                 <CardBody>
                   <div className='signup-login-link-but-div'>
                     <button className='signup-link-but' onClick={()=>navigate('/signup')}>Signup</button>
