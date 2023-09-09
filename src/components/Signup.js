@@ -167,6 +167,7 @@ const Signup = () => {
                 // Showing the signup form
                 
                 <Card style={{width: '18rem'}}>
+                <br />
                     <span>After submitting the signup form, kindly wait for some time, it may take some time to process.</span>
                     <CardBody>
                         <div className='signup-login-link-but-div'>
