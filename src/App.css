@@ -129,11 +129,25 @@ td{
 }
 
 
-
-
 @media(max-width : 600px){
   .home-page-suggestion-flex{
     flex-direction: column;
   }
 
 }
+
+
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+
+.app-suggestion-p{
+  color : red;
+  font-size: small;
+  margin : 0px;
+  font-weight: bold;
+  animation: blink 1s linear infinite; 
+}
+
