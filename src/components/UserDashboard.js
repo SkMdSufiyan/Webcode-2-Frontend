@@ -185,7 +185,7 @@ const UserDashboard = () => {
 
 
         <div className='dashboard-button-div'>
-            <Button className='dashboard-Button-class' color='info' onClick={()=>setViewProfile(true)}>View Your Profile</Button>
+            <Button className='dashboard-Button-class' color='info' onClick={()=>setViewProfile(true)}>View Your Profile ↓↓</Button>
             <Table responsive striped>
                 <tbody>
                     {typeOfUser === "Admin" || typeOfUser === "Manager" ?(
